@@ -1,19 +1,4 @@
-
-
-$roboto: "Roboto", "sans-serif";
-$shrikhand: "Shrikhand", "sans-serif";
-
-$breakpoint: (
-    "mobile": 720px,
-    "tablet": 992px,
-    "desktop": 1200px,
-);
-
-$dim: 250px;
-
-
-$spinnersize: 40px;
-
+/* COLORS */
 :root {
     --purple: #9356DC;
     --lightblue: #f5edff;
@@ -27,3 +12,18 @@ $spinnersize: 40px;
     --darkgrey: #383838;
     --black: #000000;
 }
+
+/* FONTS */
+$roboto: "Roboto", "sans-serif";
+$shrikhand: "Shrikhand", "sans-serif";
+
+/* RESPONSIVE */
+$breakpoint: (
+    "mobile": 720px,
+    "tablet": 992px,
+    "desktop": 1200px,
+);
+
+/* DIMENSION */
+$dim: 250px;
+$spinnersize: 40px;

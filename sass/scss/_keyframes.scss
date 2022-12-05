@@ -1,27 +1,4 @@
-@keyframes slideup {
-  0% {
-    transform: translateY(20px);
-    opacity: 0%;
-  }
-  100% {
-    transform: translateY(0px);
-    opacity: 100%;
-  }
-}
-@keyframes fadeout {
-  100% {
-    visibility: hidden;
-  }
-}
-@keyframes fadeout {
-  0% {
-    opacity: 100%;
-  }
-  100% {
-    opacity: 0%;
-    visibility: hidden;
-  }
-}
+/* ANIMATON LOADER */
 @keyframes spinneroff {
   0% {
     transform: rotate(360deg);
@@ -38,7 +15,32 @@
     transform: rotate(360deg);
   }
 }
+@keyframes fadeout {
+  100% {
+    visibility: hidden;
+  }
+}
+@keyframes fadeout {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+    visibility: hidden;
+  }
+}
 
+/* MENU */
+@keyframes slideup {
+  0% {
+    transform: translateY(20px);
+    opacity: 0%;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 100%;
+  }
+}
 @-webkit-keyframes rotation {
   from {
     -webkit-transform: rotate(0deg);
@@ -53,14 +55,6 @@
   }
   to {
     -moz-transform: rotate(359deg);
-  }
-}
-@-o-keyframes rotation {
-  from {
-    -o-transform: rotate(0deg);
-  }
-  to {
-    -o-transform: rotate(359deg);
   }
 }
 @keyframes rotation {

@@ -1,3 +1,31 @@
+/* MIXIN GENERALE */
+@mixin transition {
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    transform: scale(1.01);
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+  }
+}
+
+/* MIXIN RESPONSIVE */
+@mixin mobile {
+  @media (min-width: map-get($breakpoint,"mobile")) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (min-width: map-get($breakpoint,"tablet")) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: map-get($breakpoint,"desktop")) {
+    @content;
+  }
+}
+
+/* MIXIN ELEMENTS*/
 @mixin explore {
   color: var(--black);
   text-shadow: none;
@@ -17,10 +45,12 @@
   box-shadow: 0 0 2px var(--darkgrey);
   transition: all 0.2s ease-in-out;
   padding: 15px 50px;
+  
+  /* animation light button*/
   &:hover {
-    box-shadow: 0 0 5px var(--black);
-    background: linear-gradient(to left top, var(--pink), var(--purple));
-  }
+    box-shadow: 0 0 4px var(--black);
+    opacity: 85%;
+}
 }
 @mixin card {
   margin-top: 20px;
@@ -28,15 +58,6 @@
   border-radius: 20px;
   box-shadow: 0 0 5px var(--grey);
   @include transition;
-  &:hover {
-    background-color: var(--lightblue);
-  }
-}
-@mixin transition {
-  transition: all 0.2s ease-in-out;
-  &:hover {
-    transform: scale(1.01);
-  }
 }
 @mixin spinner {
   position: absolute;
@@ -44,36 +65,26 @@
   animation: spinner 1s 0.5s 5;
 }
 @mixin heart {
+  /* animation heart */
   &.fa {
     color: var(--darkgrey);
     border: 20px var(--darkgrey);
-    font-weight:lighter;
+    font-weight: lighter;
     background-clip: text;
     color: transparent;
   }
-  background: linear-gradient(to bottom, var(--darkgrey) 50%, var(--purple) 50%);
+  background: linear-gradient(
+    to bottom,
+    var(--darkgrey) 50%,
+    var(--purple) 50%
+  );
   background-size: 100% 200%;
-  background-position: top bottom;
-  transition: all 0.5s ease;
+  background-position: top;
+  transition: all 0.8s ease;
   height: 30px;
   &:hover {
     cursor: pointer;
     background-position: right bottom;
-    font-weight:600;
-  }
-}
-@mixin mobile {
-  @media (min-width: map-get($breakpoint,"mobile")) {
-    @content;
-  }
-}
-@mixin tablet {
-  @media (min-width: map-get($breakpoint,"tablet")) {
-    @content;
-  }
-}
-@mixin desktop {
-  @media (min-width: map-get($breakpoint,"desktop")) {
-    @content;
+    font-weight: 600;
   }
 }

@@ -1,3 +1,4 @@
+/* COLORS */
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 :root {
@@ -14,7 +15,13 @@
   --black: #000000;
 }
 
-/* WILDCARD */
+/* FONTS */
+/* RESPONSIVE */
+/* DIMENSION */
+/* MIXIN GENERALE */
+/* MIXIN RESPONSIVE */
+/* MIXIN ELEMENTS*/
+/* BASICS */
 * {
   box-sizing: border-box;
   font-family: "Roboto", "sans-serif";
@@ -27,7 +34,7 @@ body {
   min-height: 100vh;
 }
 
-/* NAVBAR */
+/* ANIMATION LOADER */
 .loader {
   position: fixed;
   inset: 0;
@@ -35,8 +42,8 @@ body {
   background-color: var(--white);
   opacity: 0.9;
   height: 100%;
-  -webkit-animation: fadeout 0.2s 1.5s forwards;
-          animation: fadeout 0.2s 1.5s forwards;
+  -webkit-animation: fadeout 0.2s 2s forwards;
+          animation: fadeout 0.2s 2s forwards;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,8 +58,8 @@ body {
   width: 250px;
   position: absolute;
   margin: -125px 0 -125px;
-  -webkit-animation: rotation 1s infinite linear;
-  animation: rotation 1s infinite linear;
+  -webkit-animation: rotation 2s infinite linear;
+  animation: rotation 2s infinite linear;
   border: 20px solid var(--pink);
   border-radius: 100%;
 }
@@ -72,6 +79,7 @@ body {
   border-radius: 100%;
 }
 
+/* HEADER */
 .header-box {
   display: flex;
   box-shadow: 0px 0px 12px 0px var(--darkgrey);
@@ -80,6 +88,7 @@ body {
 .header-box .fa-arrow-left {
   font-size: 20px;
   margin: 25px 0px 0px 30px;
+  color: var(--black);
 }
 .header-box .fa-arrow-left:hover {
   color: var(--purple);
@@ -90,10 +99,6 @@ body {
   height: auto;
   cursor: pointer;
   margin: 20px auto 15px auto;
-  transition: all 0.2s ease-in-out;
-}
-.header-box #logo:hover {
-  transform: scale(1.01);
 }
 
 /* FOOTER */
@@ -130,49 +135,10 @@ body {
   color: var(--white);
 }
 .footer__links .footer__link:hover {
-  color: var(--black);
+  color: var(--pink);
 }
 
-@-webkit-keyframes slideup {
-  0% {
-    transform: translateY(20px);
-    opacity: 0%;
-  }
-  100% {
-    transform: translateY(0px);
-    opacity: 100%;
-  }
-}
-
-@keyframes slideup {
-  0% {
-    transform: translateY(20px);
-    opacity: 0%;
-  }
-  100% {
-    transform: translateY(0px);
-    opacity: 100%;
-  }
-}
-@-webkit-keyframes fadeout {
-  100% {
-    visibility: hidden;
-  }
-}
-@keyframes fadeout {
-  100% {
-    visibility: hidden;
-  }
-}
-@keyframes fadeout {
-  0% {
-    opacity: 100%;
-  }
-  100% {
-    opacity: 0%;
-    visibility: hidden;
-  }
-}
+/* ANIMATON LOADER */
 @-webkit-keyframes spinneroff {
   0% {
     transform: rotate(360deg);
@@ -205,6 +171,46 @@ body {
     transform: rotate(360deg);
   }
 }
+@-webkit-keyframes fadeout {
+  100% {
+    visibility: hidden;
+  }
+}
+@keyframes fadeout {
+  100% {
+    visibility: hidden;
+  }
+}
+@keyframes fadeout {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+    visibility: hidden;
+  }
+}
+/* MENU */
+@-webkit-keyframes slideup {
+  0% {
+    transform: translateY(20px);
+    opacity: 0%;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 100%;
+  }
+}
+@keyframes slideup {
+  0% {
+    transform: translateY(20px);
+    opacity: 0%;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 100%;
+  }
+}
 @-webkit-keyframes rotation {
   from {
     -webkit-transform: rotate(0deg);
@@ -221,6 +227,12 @@ body {
     transform: rotate(359deg);
   }
 }
+/* MIXIN GENERALE */
+/* MIXIN RESPONSIVE */
+/* MIXIN ELEMENTS*/
+/* MIXIN GENERALE */
+/* MIXIN RESPONSIVE */
+/* MIXIN ELEMENTS*/
 /* LOCALISATION */
 .search-form {
   display: flex;
@@ -237,7 +249,7 @@ body {
   color: var(--darkgrey);
 }
 
-/* EXPLORE */
+/* EXPLORER */
 .explore {
   text-align: center;
   padding: 50px 0px 80px 0px;
@@ -282,6 +294,8 @@ body {
 }
 .explore__button:hover {
   transform: scale(1.01);
+  margin-left: 0.5%;
+  margin-right: 0.5%;
 }
 .explore__button__text {
   text-decoration: none;
@@ -294,13 +308,14 @@ body {
   box-shadow: 0 0 2px var(--darkgrey);
   transition: all 0.2s ease-in-out;
   padding: 15px 50px;
+  /* animation light button*/
 }
 .explore__button__text:hover {
-  box-shadow: 0 0 5px var(--black);
-  background: linear-gradient(to left top, var(--pink), var(--purple));
+  box-shadow: 0 0 4px var(--black);
+  opacity: 85%;
 }
 
-/* FUNCTIONS */
+/* FONCTIONNEMENTS */
 .functions {
   display: flex;
   flex-direction: column;
@@ -330,9 +345,8 @@ body {
 }
 .functions-card:hover {
   transform: scale(1.01);
-}
-.functions-card:hover {
-  background-color: var(--lightblue);
+  margin-left: 0.5%;
+  margin-right: 0.5%;
 }
 @media (min-width: 992px) {
   .functions-card {
@@ -389,6 +403,8 @@ body {
 }
 .restaurants-list .restaurant-card-list:hover {
   transform: scale(1.01);
+  margin-left: 0.5%;
+  margin-right: 0.5%;
 }
 @media (min-width: 992px) {
   .restaurants-list .restaurant-card-list {
@@ -441,10 +457,11 @@ body {
 .restaurant-card__info i {
   margin: 20px 0px 0px 0px;
   font-size: 20px;
+  /* animation heart */
   background: linear-gradient(to bottom, var(--darkgrey) 50%, var(--purple) 50%);
   background-size: 100% 200%;
-  background-position: top bottom;
-  transition: all 0.5s ease;
+  background-position: top;
+  transition: all 0.8s ease;
   height: 30px;
 }
 .restaurant-card__info i.fa {
@@ -492,10 +509,11 @@ body {
 .menu-title i {
   margin: 30px 20px 0px 0px;
   font-size: 30px;
+  /* animation heart */
   background: linear-gradient(to bottom, var(--darkgrey) 50%, var(--purple) 50%);
   background-size: 100% 200%;
-  background-position: top bottom;
-  transition: all 0.5s ease;
+  background-position: top;
+  transition: all 0.8s ease;
   height: 30px;
 }
 .menu-title i.fa {
@@ -550,27 +568,15 @@ body {
   transform: translateY(20px);
   opacity: 0%;
   overflow: hidden;
+  /* animation load menu */
   -webkit-animation: slideup 1s forwards;
           animation: slideup 1s forwards;
+  /* animation circle check */
   margin-top: 20px;
   text-decoration: none;
   border-radius: 20px;
   box-shadow: 0 0 5px var(--grey);
   transition: all 0.2s ease-in-out;
-}
-.menu-card-list .menu-card:hover {
-  transform: scale(1.01);
-}
-.menu-card-list .menu-card:hover {
-  background-color: var(--lightblue);
-}
-.menu-card-list .menu-card:hover .menu-card__info__validation {
-  width: 70px;
-  opacity: 100%;
-}
-.menu-card-list .menu-card:hover .fa-check-circle {
-  transform: rotate(0deg);
-  transition: 0.4s ease-in-out;
 }
 .menu-card-list .menu-card:nth-child(3) {
   -webkit-animation-delay: 0.5s;
@@ -584,14 +590,32 @@ body {
   -webkit-animation-delay: 1.5s;
           animation-delay: 1.5s;
 }
+.menu-card-list .menu-card:hover {
+  transform: scale(1.01);
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+}
+.menu-card-list .menu-card:hover .menu-card__info__validation {
+  width: 70px;
+  opacity: 100%;
+}
+.menu-card-list .menu-card:hover .fa-check-circle {
+  transform: rotate(360deg);
+  transition: 0.4s ease-in;
+}
 
 .menu-card__info {
   padding: 5px;
   display: flex;
   max-width: 100%;
-  overflow: hidden;
   flex: 1;
   justify-content: space-between;
+  transition: all 0.2s ease-in-out;
+}
+.menu-card__info:hover {
+  transform: scale(1.01);
+  margin-left: 0.5%;
+  margin-right: 0.5%;
 }
 .menu-card__info__remark {
   display: flex;
@@ -627,13 +651,13 @@ body {
   justify-content: center;
   border-radius: 0 15px 15px 0;
   opacity: 0;
+  /* animation slide circle check */
   transition: transform 0.4s ease-in-out, width 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  /* animation circle check */
 }
 .menu-card__info__validation i {
   color: var(--white);
   font-size: 30px;
-  transition: 0.4s ease-in-out;
-  transform: rotate(360deg);
 }
 
 .menu__button {
@@ -644,6 +668,8 @@ body {
 }
 .menu__button:hover {
   transform: scale(1.01);
+  margin-left: 0.5%;
+  margin-right: 0.5%;
 }
 .menu__button .menu__button__text {
   text-decoration: none;
@@ -656,8 +682,9 @@ body {
   box-shadow: 0 0 2px var(--darkgrey);
   transition: all 0.2s ease-in-out;
   padding: 15px 50px;
+  /* animation light button*/
 }
 .menu__button .menu__button__text:hover {
-  box-shadow: 0 0 5px var(--black);
-  background: linear-gradient(to left top, var(--pink), var(--purple));
+  box-shadow: 0 0 4px var(--black);
+  opacity: 85%;
 }/*# sourceMappingURL=style.css.map */
