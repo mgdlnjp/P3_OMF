@@ -67,6 +67,12 @@
   justify-content: space-evenly;
   width: 90%;
   position: relative;
+  &:hover {
+    background-color: var(--lightblue);
+    .fas{
+    color: var(--purple);
+    }
+  }
   @include card;
   @include tablet {
     flex-direction: column;

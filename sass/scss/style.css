@@ -344,6 +344,12 @@ body {
   transition: all 0.2s ease-in-out;
 }
 .functions-card:hover {
+  background-color: var(--lightblue);
+}
+.functions-card:hover .fas {
+  color: var(--purple);
+}
+.functions-card:hover {
   transform: scale(1.01);
   margin-left: 0.5%;
   margin-right: 0.5%;
