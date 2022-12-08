@@ -40,9 +40,14 @@
   }
   &__button {
     margin-top: 50px;
+    display: flex;
+    justify-content: center;
     @include transition;
     &__text {
       @include button;
+      @include small {
+        font-size: 100%;
+      }
     }
   }
 }
@@ -67,12 +72,15 @@
   justify-content: space-evenly;
   width: 90%;
   position: relative;
+
+  /* animation chgt couleur carte fonctionnement */
   &:hover {
     background-color: var(--lightblue);
-    .fas{
-    color: var(--purple);
+    .fas {
+      color: var(--purple);
     }
   }
+
   @include card;
   @include tablet {
     flex-direction: column;
@@ -249,7 +257,7 @@
     &:nth-child(5) {
       animation-delay: 1.5s;
     }
-    
+
     /* animation circle check */
     @include card;
     &:hover .menu-card__info__validation {
@@ -260,7 +268,6 @@
       transform: rotate(360deg);
       transition: 0.4s ease-in;
     }
-
   }
 }
 .menu-card__info {
@@ -282,11 +289,18 @@
       overflow: hidden;
       text-overflow: ellipsis;
       margin-bottom: 0px;
+      @include small {
+        margin-top: 5px;
+      }
     }
     p {
       margin: 2px 0px 0px 10px;
       overflow: hidden;
       text-overflow: ellipsis;
+    }
+    @include small {
+      font-size: 68%;
+      white-space: normal;
     }
   }
   &__price {
@@ -294,6 +308,11 @@
     display: flex;
     align-items: flex-end;
     margin: 68px 10px 0px 0px;
+    @include small {
+      font-size: 80%;
+      white-space: normal;
+      margin-top: 10px;
+    }
   }
 }
 .menu-card__info__validation {
@@ -304,17 +323,15 @@
   justify-content: center;
   border-radius: 0 15px 15px 0;
   opacity: 0;
-
-  /* animation slide circle check */
-  transition: transform 0.4s ease-in-out, width 0.4s ease-in-out,
-    opacity 0.4s ease-in-out;
-
-
-  /* animation circle check */
+  z-index: 1;
   i {
     color: var(--white);
     font-size: 30px;
   }
+
+  /* animation slide circle check */
+  transition: transform 0.4s ease-in-out, width 0.4s ease-in-out,
+    opacity 0.4s ease-in-out;
 }
 .menu__button {
   display: flex;
@@ -324,4 +341,4 @@
   .menu__button__text {
     @include button;
   }
-} 
+}

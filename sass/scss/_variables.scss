@@ -1,27 +1,28 @@
 /* COLORS */
 :root {
-    --purple: #9356DC;
-    --lightblue: #f5edff;
-    --pink: #FF79DA;
-    --green: #99E2D0;
-    --darkgreen: #3b8468;
-    --white: #FFFFFF;
-    --lightgrey: #ececec;
-    --softgrey: #dadada;
-    --grey: #bbbbbb;
-    --darkgrey: #383838;
-    --black: #000000;
+  --purple: #9356dc;
+  --lightblue: #f5edff;
+  --pink: #ff79da;
+  --green: #99e2d0;
+  --darkgreen: #3b8468;
+  --white: #ffffff;
+  --lightgrey: #ececec;
+  --softgrey: #dadada;
+  --grey: #bbbbbb;
+  --darkgrey: #383838;
+  --black: #000000;
 }
 
-/* FONTS */ 
+/* FONTS */
 $roboto: "Roboto", "sans-serif";
 $shrikhand: "Shrikhand", "sans-serif";
 
 /* RESPONSIVE */
 $breakpoint: (
-    "mobile": 720px,
-    "tablet": 992px,
-    "desktop": 1200px,
+  "small": 470px,
+  "mobile": 720px,
+  "tablet": 992px,
+  "desktop": 1200px,
 );
 
 /* DIMENSION */

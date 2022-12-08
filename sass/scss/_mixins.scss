@@ -9,8 +9,13 @@
 }
 
 /* MIXIN RESPONSIVE */
+@mixin small {
+  @media (max-width: map-get($breakpoint,"small")) {
+    @content;
+  }
+}
 @mixin mobile {
-  @media (min-width: map-get($breakpoint,"mobile")) {
+  @media (max-width: map-get($breakpoint,"mobile")) {
     @content;
   }
 }
@@ -45,19 +50,19 @@
   box-shadow: 0 0 2px var(--darkgrey);
   transition: all 0.2s ease-in-out;
   padding: 15px 50px;
-  
+
   /* animation light button*/
   &:hover {
     box-shadow: 0 0 4px var(--black);
     opacity: 85%;
-}
+  }
 }
 @mixin card {
   margin-top: 20px;
   text-decoration: none;
   border-radius: 20px;
   box-shadow: 0 0 5px var(--grey);
-  @include transition; 
+  @include transition;
 }
 @mixin spinner {
   position: absolute;

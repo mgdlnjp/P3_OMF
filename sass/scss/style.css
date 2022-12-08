@@ -1,13 +1,16 @@
+/* MIXIN GENERALE */
+/* MIXIN RESPONSIVE */
+/* MIXIN ELEMENTS*/
 /* COLORS */
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 :root {
-  --purple: #9356DC;
+  --purple: #9356dc;
   --lightblue: #f5edff;
-  --pink: #FF79DA;
-  --green: #99E2D0;
+  --pink: #ff79da;
+  --green: #99e2d0;
   --darkgreen: #3b8468;
-  --white: #FFFFFF;
+  --white: #ffffff;
   --lightgrey: #ececec;
   --softgrey: #dadada;
   --grey: #bbbbbb;
@@ -18,6 +21,96 @@
 /* FONTS */
 /* RESPONSIVE */
 /* DIMENSION */
+/* ANIMATON LOADER */
+@-webkit-keyframes spinneroff {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes spinneroff {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes fadeout {
+  100% {
+    visibility: hidden;
+  }
+}
+@keyframes fadeout {
+  100% {
+    visibility: hidden;
+  }
+}
+@keyframes fadeout {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+    visibility: hidden;
+  }
+}
+/* MENU */
+@-webkit-keyframes slideup {
+  0% {
+    transform: translateY(20px);
+    opacity: 0%;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 100%;
+  }
+}
+@keyframes slideup {
+  0% {
+    transform: translateY(20px);
+    opacity: 0%;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 100%;
+  }
+}
+/* GREEN CHECK */
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
 /* MIXIN GENERALE */
 /* MIXIN RESPONSIVE */
 /* MIXIN ELEMENTS*/
@@ -138,98 +231,6 @@ body {
   color: var(--pink);
 }
 
-/* ANIMATON LOADER */
-@-webkit-keyframes spinneroff {
-  0% {
-    transform: rotate(360deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-@keyframes spinneroff {
-  0% {
-    transform: rotate(360deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-@-webkit-keyframes spinner {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes spinner {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes fadeout {
-  100% {
-    visibility: hidden;
-  }
-}
-@keyframes fadeout {
-  100% {
-    visibility: hidden;
-  }
-}
-@keyframes fadeout {
-  0% {
-    opacity: 100%;
-  }
-  100% {
-    opacity: 0%;
-    visibility: hidden;
-  }
-}
-/* MENU */
-@-webkit-keyframes slideup {
-  0% {
-    transform: translateY(20px);
-    opacity: 0%;
-  }
-  100% {
-    transform: translateY(0px);
-    opacity: 100%;
-  }
-}
-@keyframes slideup {
-  0% {
-    transform: translateY(20px);
-    opacity: 0%;
-  }
-  100% {
-    transform: translateY(0px);
-    opacity: 100%;
-  }
-}
-@-webkit-keyframes rotation {
-  from {
-    -webkit-transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(359deg);
-  }
-}
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
-/* MIXIN GENERALE */
-/* MIXIN RESPONSIVE */
-/* MIXIN ELEMENTS*/
 /* MIXIN GENERALE */
 /* MIXIN RESPONSIVE */
 /* MIXIN ELEMENTS*/
@@ -290,6 +291,8 @@ body {
 }
 .explore__button {
   margin-top: 50px;
+  display: flex;
+  justify-content: center;
   transition: all 0.2s ease-in-out;
 }
 .explore__button:hover {
@@ -314,6 +317,11 @@ body {
   box-shadow: 0 0 4px var(--black);
   opacity: 85%;
 }
+@media (max-width: 470px) {
+  .explore__button__text {
+    font-size: 100%;
+  }
+}
 
 /* FONCTIONNEMENTS */
 .functions {
@@ -337,6 +345,7 @@ body {
   justify-content: space-evenly;
   width: 90%;
   position: relative;
+  /* animation chgt couleur carte fonctionnement */
   margin-top: 20px;
   text-decoration: none;
   border-radius: 20px;
@@ -637,16 +646,34 @@ body {
   text-overflow: ellipsis;
   margin-bottom: 0px;
 }
+@media (max-width: 470px) {
+  .menu-card__info__remark h3 {
+    margin-top: 5px;
+  }
+}
 .menu-card__info__remark p {
   margin: 2px 0px 0px 10px;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+@media (max-width: 470px) {
+  .menu-card__info__remark {
+    font-size: 68%;
+    white-space: normal;
+  }
 }
 .menu-card__info__price {
   color: var(--black);
   display: flex;
   align-items: flex-end;
   margin: 68px 10px 0px 0px;
+}
+@media (max-width: 470px) {
+  .menu-card__info__price {
+    font-size: 80%;
+    white-space: normal;
+    margin-top: 10px;
+  }
 }
 
 .menu-card__info__validation {
@@ -657,9 +684,9 @@ body {
   justify-content: center;
   border-radius: 0 15px 15px 0;
   opacity: 0;
+  z-index: 1;
   /* animation slide circle check */
   transition: transform 0.4s ease-in-out, width 0.4s ease-in-out, opacity 0.4s ease-in-out;
-  /* animation circle check */
 }
 .menu-card__info__validation i {
   color: var(--white);
