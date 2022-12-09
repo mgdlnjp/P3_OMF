@@ -637,7 +637,11 @@ body {
   flex-direction: column;
   color: var(--black);
   overflow: hidden;
-  white-space: nowrap;
+}
+@media (min-width: 992px) {
+  .menu-card__info__remark {
+    font-size: 12.5px;
+  }
 }
 .menu-card__info__remark h3 {
   margin: 8px 0px 0px 10px;
